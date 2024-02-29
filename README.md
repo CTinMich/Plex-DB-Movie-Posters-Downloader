@@ -1,17 +1,27 @@
+
 # Plex-DB-Covers-Downloader
-Python Script to download the covers stored in your Plex DB and store them as "poster.jpg" files in the movie folders.
 
-Creative Commons Attribution-NonCommercial 4.0 International License
-This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
-
-I wrote this script after I had to re-add my Plex Movies libraries and realized I lost a lot of my fixed/custom poster art for my movies.  When you have your Plex library setup the way you like it, this script when ran will download the covers you have stored into you Plex movie DB into the individual movies folders as "poster.jpg" files.  If you then have you Movies library configured to us "Local Artwork" and you run a Media Scan it will now use thos posters first if you have to reload.
+Linux Python Script to download the covers stored in your Plex DB and store them as "poster.jpg" files in your movie library folders.
 
 
-This script was setup for my Plex config which is a Linux Docker container whose physical movies library location is "/home/pi/usbhdd/Media/Movies/{Movies Folders}".  If you do not use a Docker Container and Plex see the full true path to your library you will need to blank out the  "MOVIES_PATH_PREFIX_REAL" variable to remove that prefix to the Library path.
+## Documentation
 
-Other Variable that will (or may need to) be adjusted are the:
-  # Plex server configuration
-  PLEX_URL = 'http://{IP or FQDN}:32400'
-  PLEX_TOKEN = 'xxxxxxxxxxx' # To get your token do a XML view on one of your movies and in the URL address look at the very end for a "token=" string.
-  MOVIES_SECTION_ID = '1' # Replace with your movies section ID
-  MOVIES_PATH_PREFIX_REAL = '/home/pi/usbhdd'  # Specify the real path prefix for movie files
+I wrote this script after I had to re-add my Plex movies libraries and realized I lost a lot of my fixed/custom poster art for my movies.  
+
+When you have your Plex library setup the way you like it, this script when ran, will download the covers you have stored into you Plex movie DB into the individual movies folders as "poster.jpg" files.  Then modify your Movie library to use "Local Artwork when present" and then when you run a media library can it will now use those posters first if you have to reload.
+
+This script was designed around Plex running on Linux as a Docker Container.  It will not work as is if you are using a Windows based Plex server.  It will "probably" (not tested) work on non-Docker Linux setup if you blank out the "MOVIES_PATH_PREFIX_REAL" variable seeing that your Plex should see the full true path to your Movies library.
+
+Variables:
+
+    PLEX_URL = 'http://{IP or FQDN}:32400'
+
+    PLEX_TOKEN = 'xxxxxxxxxxxxxxxx' # Replace with you Plex token
+    
+    MOVIES_SECTION_ID = '1' # Replace with your movies section ID
+    
+    MOVIES_PATH_PREFIX_REAL = '/home/pi/usbhdd'  # Specify the real path prefix for movie files
+
+If you do not know your Plex token the easiest way to do this is use the "Get Info" option on one of your movies.  In the Media Info box at the bottom click on the "view xml".  This will open the XML data in a browser.  The token can be seen at the end of the URL address line right after "Plex-Token="
+
+[Documentation](https://linktodocumentation)
