@@ -15,7 +15,7 @@ This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 Int
 
 I wrote this script after I had to re-add my Plex movies libraries and realized I lost a lot of my fixed/custom poster art for my movies.  
 
-When you have your Plex library setup the way you like it, this script when ran, will download the covers you have stored into you Plex movie DB into the individual movies folders as "poster.jpg" files.  Then modify your Movie library to use "Local Artwork when present" and then when you run a media library can it will now use those posters first if you have to reload.
+When you have your Plex library setup the way you like it, this script when ran, will download the covers you have stored into you Plex movie DB into the individual movies folders as "poster.jpg" files.  Then modify your Movie library to use "Use local assets" and then when you run a media library can it will now use those posters first if you have to reload.
 
 This script was designed around Plex running on Linux as a Docker Container.  It will not work as is if you are using a Windows based Plex server.  It will "probably" (not tested) work on non-Docker Linux setup if you blank out the "MOVIES_PATH_PREFIX_REAL" variable seeing that your Plex should see the full true path to your Movies library.
 
