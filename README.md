@@ -13,12 +13,21 @@ This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 Int
 
 ## Documentation
 
-I wrote this script after I had to re-add my Plex movies libraries and realized I lost a lot of my fixed/custom poster art for my movies.  
+I just wrote this short Linux based python script and sharing it to anyone else that may find it useful.
 
-When you have your Plex library setup the way you like it, this script when ran, will download the covers you have stored into you Plex movie DB into the individual movies folders as "poster.jpg" files.  Then modify your Movie library to use "Use local assets" and then when you run a media library can it will now use those posters first if you have to reload.
+I wrote this script after I had to re-add my Plex movies libraries and realized I lost a lot of my fixed/custom poster art for my movies.
 
-This script was designed around Plex running on Linux as a Docker Container.  It will not work as is if you are using a Windows based Plex server.  It will "probably" (not tested) work on non-Docker Linux setup if you blank out the "MOVIES_PATH_PREFIX_REAL" variable seeing that your Plex should see the full true path to your Movies library.
+This script will look up what posters you currently have configured in your Plex DB and will save a copy of it as "poster.jpg" in each appropriate movie folder location. ***This does expect you are following the standard that each movie is in its own folder.
 
+You can then update your Plex library Movie library config to use "Use local assets " and then when you run a media library scan it will now use those posters first if you have to reload in the future.
+
+Other things to take in consideration:
+
+I run Plex in Linux Docker Container
+
+I made no effort to make this work on Windows, but it can be used as a reference to those that want to go that route.
+
+Because I use docker... Plex's library does not have the "complete" path to my ext movie folders, so I have a path prefix variable in there to tack on the missing path pieces. If you do not use docker I think this script will still work, you just need to "blank out" the variable value.
 Variables:
 
     PLEX_URL = 'http://{IP or FQDN}:32400'
