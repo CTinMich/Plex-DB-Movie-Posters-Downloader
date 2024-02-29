@@ -4,6 +4,13 @@
 Linux Python Script to download the covers stored in your Plex DB and store them as "poster.jpg" files in your movie library folders.
 
 
+# LICENSE
+
+Creative Commons Attribution-NonCommercial 4.0 International License
+
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+
+
 ## Documentation
 
 I wrote this script after I had to re-add my Plex movies libraries and realized I lost a lot of my fixed/custom poster art for my movies.  
