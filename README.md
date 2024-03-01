@@ -15,7 +15,10 @@ This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 Int
 
 Python v3.6 or greater.
 
-Python "Requests" library (pip install -r requirements.txt or pip install requests).
+Python "Requests" library 
+    
+    pip install -r requirements.txt or 
+    pip install requests).
 
 
 # Documentation
