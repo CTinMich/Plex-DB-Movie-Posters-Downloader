@@ -6,12 +6,19 @@ Linux Python Script to download the covers stored in your Plex DB and store them
 
 # LICENSE
 
-Creative Commons Attribution-NonCommercial 4.0 International License
+Creative Commons Attribution-NonCommercial 4.0 International License.
 
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 
 
-## Documentation
+# Python Requirements
+
+Python v3.6 or greator.
+
+Python "Requests" library (pip install -r requirements.txt or pip install requests).
+
+
+# Documentation
 
 I just wrote this short Linux based python script and sharing it to anyone else that may find it useful.
 
