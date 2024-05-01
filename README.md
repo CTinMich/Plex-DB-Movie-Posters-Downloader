@@ -34,7 +34,13 @@ You can then update your Plex library Movie library config to use "Use local ass
 Other things to take in consideration:
 
 1) I run Plex in Linux Docker Container
-2) The Script can find the exact Movie folder path, but there was challenges in trying to find TV Show paths using the API so I fusged it a little to assume the folder matches the show "title" with a {xxxxx} after it for {tmdb-xxxx} string to help assure it found the correct folder path.  If anyone know how to get the physical paths for TV Shows using the API please send me a note! 
+2) The Script can find the exact Movie folder path, but there was challenges in trying to find TV Show paths using the API so I fusged it a little to assume the folder matches the show "title" with a {xxxxx} after it for {tmdb-xxxx} string to help assure it found the correct folder path.  If anyone know how to get the physical paths for TV Shows using the API please send me a note!
+3) My pathing:
+   Physical Movies = "/home/pi/usbhdd/Media/Movies"  - Docker mapping sees it as "/Media/Movies"
+   Physical TV Shows = "/home/pi/usbhdd-02/Media/'TV Shows'" - Docker mapping sees it as "/Media/'TV Shows'"
+4) My file naming patterns:
+   Movies = "/home/pi/usbhdd/Media/Movies/{MOVIE} {{tmdb-xxxxx}}"
+   TV = "/home/pi/usbhdd-02/Media/'TV Shows'/{TV SHOW} {{tvdb-xxxx}}/{SEASON}"
 
 I made no effort to make this work on Windows, but it can be used as a reference to those that want to go that route.
 
